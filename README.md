@@ -5,7 +5,7 @@ Home: https://github.com/wexeee/spec2nii
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Multi-format in vivo MR spectroscopy conversion to NIfTI
 
