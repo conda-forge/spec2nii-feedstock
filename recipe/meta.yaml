@@ -1,5 +1,5 @@
 {% set name = "spec2nii" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0403f53411df8a722e2968a2295ca5d38d87931540000f3f8db5ce9ec093a343
+  sha256: 6f7fb0ca5a6fcd4493b62e8139df26a3983ce329a8ac2be4be6a77ffe9d3f8a3
 
 build:
   noarch: python
@@ -27,6 +27,8 @@ requirements:
     - pydicom
     - pymapvbvd
     - scipy
+    - brukerapi >=0.1.4.0
+    - pandas
 
 test:
   imports:
