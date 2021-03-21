@@ -27,6 +27,8 @@ requirements:
     - pydicom
     - pymapvbvd
     - scipy
+    - brukerapi >=0.1.4.0
+    - pandas
 
 test:
   imports:
