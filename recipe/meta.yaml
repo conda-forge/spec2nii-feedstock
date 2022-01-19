@@ -20,6 +20,7 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - pyyaml
   run:
     - python >=3.7
     - numpy
@@ -49,4 +50,3 @@ about:
 extra:
   recipe-maintainers:
     - wtclarke
-    - wexeee
