@@ -17,10 +17,16 @@ build:
     - spec2nii = spec2nii.spec2nii:main
 
 requirements:
+  build:
+    - python >=3.7
+    - pip
+    - versioneer
+    - pyyaml
   host:
     - python >=3.7
     - pip
     - pyyaml
+    - versioneer
   run:
     - python >=3.7
     - numpy
