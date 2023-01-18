@@ -32,10 +32,11 @@ requirements:
     - numpy
     - nibabel
     - pydicom
-    - pymapvbvd
+    - pymapvbvd >=0.5.2
     - scipy
-    - brukerapi >=0.1.4.0
+    - brukerapi >=0.1.8
     - pandas
+    - nifti-mrs >=0.1.3
 
 test:
   imports:
