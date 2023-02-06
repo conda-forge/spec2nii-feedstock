@@ -1,5 +1,5 @@
 {% set name = "spec2nii" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 21ed504a930a6e4f91ef7e4a677921d4cc62bc39f13717fa5981833be805275e
+  sha256: ca9fcf8baa856d2e1e5a2555b80ca81eb1b1e2144890a015a9f0629d35f3ae35
 
 build:
   noarch: python
