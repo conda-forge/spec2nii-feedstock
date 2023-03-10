@@ -1,11 +1,11 @@
-About spec2nii
-==============
+About spec2nii-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spec2nii-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/wexeee/spec2nii
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spec2nii-feedstock/blob/main/LICENSE.txt)
 
 Summary: Multi-format in vivo MR spectroscopy conversion to NIfTI
 
