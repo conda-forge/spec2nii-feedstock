@@ -29,11 +29,11 @@ requirements:
     - versioneer
   run:
     - python >=3.9
-    - numpy>=1.26
+    - numpy >=1.26
     - nibabel
     - pydicom
     - pymapvbvd >=0.6.0
-    - scipy==1.13.*
+    - scipy ==1.13.*
     - brukerapi >=0.1.8
     - pandas
     - nifti-mrs >=1.2.0
