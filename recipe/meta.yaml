@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - spec2nii = spec2nii.spec2nii:main
@@ -23,13 +23,13 @@ requirements:
     - versioneer
     - pyyaml
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - pyyaml
     - versioneer
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy >=1.26
     - nibabel
     - pydicom
@@ -40,6 +40,8 @@ requirements:
     - nifti-mrs >=1.3.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - spec2nii
   commands:
