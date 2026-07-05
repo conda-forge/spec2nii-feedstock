@@ -18,7 +18,7 @@ build:
 
 requirements:
   build:
-    - python >=3.9
+    - python >=3.10
     - pip
   host:
     - python {{ python_min }}
@@ -32,10 +32,11 @@ requirements:
     - pydicom 3.*
     - pymapvbvd >=0.6.0
     - scipy >=1.13
-    - brukerapi >=0.1.8,<0.1.9
+    - brukerapi >=0.2.5
     - pandas
-    - nifti-mrs >=1.3.2
+    - nifti-mrs >=1.4.1
     - chardet
+    - textual >=7.4.0,<9
 
 test:
   requires:
