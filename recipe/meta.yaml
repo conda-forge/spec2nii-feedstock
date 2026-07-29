@@ -1,5 +1,8 @@
 {% set name = "spec2nii" %}
-{% set version = "0.8.14" %}
+{% set version = "0.8.15" %}
+
+{% set pyproject = load_file_data("pyproject.toml") %}
+{% set deps = pyproject["project"]["dependencies"] %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 433036edf970b8adcab3dfa4e1e5859556ca74719a60216e08894f8b34277ad1
+  sha256: 506567ca8ddce358a00d8351e80586c8025ef9466bc64abf59a81e495a820e92
 
 build:
   noarch: python
@@ -27,16 +30,9 @@ requirements:
     - setuptools-scm >=8
   run:
     - python >={{ python_min }}
-    - numpy >=1.26
-    - nibabel
-    - pydicom 3.*
-    - pymapvbvd >=0.6.0
-    - scipy >=1.13
-    - brukerapi >=0.2.5
-    - pandas
-    - nifti-mrs >=1.4.1
-    - chardet
-    - textual >=7.4.0,<9
+    {% for package in deps %}
+    - {{ package.lower() }}
+    {% endfor %}
 
 test:
   requires:
