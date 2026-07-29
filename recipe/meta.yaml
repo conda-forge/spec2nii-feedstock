@@ -1,6 +1,9 @@
 {% set name = "spec2nii" %}
 {% set version = "0.8.15" %}
 
+{% set pyproject = load_file_data("pyproject.toml") %}
+{% set deps = pyproject["project"]["dependencies"] %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -27,16 +30,9 @@ requirements:
     - setuptools-scm >=8
   run:
     - python >={{ python_min }}
-    - numpy >=1.26
-    - nibabel
-    - pydicom 3.*
-    - pymapvbvd >=0.6.0
-    - scipy >=1.13
-    - brukerapi >=0.2.5
-    - pandas
-    - nifti-mrs >=1.4.1
-    - chardet
-    - textual >=7.4.0,<9
+    {% for package in deps %}
+    - {{ package.lower() }}
+    {% endfor %}
 
 test:
   requires:
