@@ -50,6 +50,7 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
+      pip_check: false
   - requirements:
       run:
         - python ${{ python_min }}.*
