@@ -26,7 +26,7 @@ requirements:
     - python >=3.10
     - pip
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools >=77
     - setuptools-scm >=8
@@ -34,7 +34,7 @@ requirements:
     - python >=${{ python_min }}
     - numpy >=1.26
     - nibabel
-    - pydicom ==3.*
+    - pydicom >=3,<4
     - pymapvbvd >=0.6.0
     - scipy >=1.13
     - brukerapi >=0.2.5,<0.2.6
@@ -47,9 +47,12 @@ tests:
   - python:
       imports:
         - spec2nii
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - spec2nii --help
 
