@@ -1,9 +1,8 @@
-
 schema_version: 1
 
 context:
   name: spec2nii
-  version: "0.8.15"
+  version: "0.8.16"
 
 package:
   name: ${{ name | lower }}
@@ -11,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/spec2nii/spec2nii-${{ version }}.tar.gz
-  sha256: 506567ca8ddce358a00d8351e80586c8025ef9466bc64abf59a81e495a820e92
+  sha256: 5266a662ccef2a7d9fff36e76893084b81870b169aa50e35af5dd32f73ebd94b
 
 build:
   noarch: python
